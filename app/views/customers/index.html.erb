@@ -1,0 +1,17 @@
+<h1>Customers</h1>
+
+<% @customers.map do |customer| %>
+
+  <ol>
+  <li> Id: <%= customer['id']  %></li>
+  <li> Name: <%= customer['name']  %></li>
+  <li> Email:<%= customer['email']  %></li>
+  <li> Status:<%= customer['status']  %></li>
+  <% unless customer['status'] == 'archived'%>
+    <li><%= link_to "to file", customer_path(customer['id']), method: :delete %></li>
+  <% end %>
+
+</ol>
+<% end %>
+
+<%= link_to "New List", new_customer_path %>

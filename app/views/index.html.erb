@@ -1,0 +1,12 @@
+<h1>Customers</h1>
+<% @customers.each do |customer| %>
+  <%"huhuhuhuhu#{@customer.inspect}"%>
+
+  <ol>
+  <li> Id: <%= customer.id  %></li>
+  <li> Name: <%= customer.name  %></li>
+  <li> Email:<%= customer.email  %></li>
+  <li> Status:<%= customer.status  %></li>
+  <li><%= link_to "destroy", customer_path(customer.id), method: :delete %></li>
+</ol>
+<% end %>

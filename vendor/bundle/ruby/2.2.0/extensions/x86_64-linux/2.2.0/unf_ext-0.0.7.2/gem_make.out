@@ -1,0 +1,12 @@
+/home/larissa/.rvm/rubies/ruby-2.2.1/bin/ruby -r ./siteconf20160806-15758-1oy4kde.rb extconf.rb
+checking for main() in -lstdc++... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.so
+
+make "DESTDIR=" install
+/usr/bin/install -m 0755 unf_ext.so ./.gem.20160806-15758-1jy22ro
